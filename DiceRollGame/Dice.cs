@@ -58,8 +58,6 @@ internal class Dice
     {
         return number >= 1 && number <= 6;
     }
-
-
     private bool hasWon()
     {
         return _userChoice == _randomNumber;
