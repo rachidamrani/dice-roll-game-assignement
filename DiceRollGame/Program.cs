@@ -1,11 +1,12 @@
-﻿using DiceRollGame;
+﻿using DiceRollGame.Game;
 
-// Create an instance of Dice Class
-Dice dice = new Dice();
-// Rolling the dice 
-dice.Roll();
-// Start the game
-dice.startGame();
+var random = new Random();
+var dice = new Dice(random);
+var guessingGame = new GuessingGame(dice);
+
+GameResult gameResult = guessingGame.Play();
+
+GuessingGame.PrintResult(gameResult);
 
 
-Console.ReadKey();
+Console.ReadLine();
